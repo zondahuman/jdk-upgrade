@@ -9,19 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>jdk-eight</artifactId>
-
-
-
-    <dependencies>
-        <dependency>
-            <artifactId>jdk-common</artifactId>
-            <groupId>com.abin.lee</groupId>
-            <version>0.0.1-SNAPSHOT</version>
-        </dependency>
-    </dependencies>
-
-
+    <artifactId>jdk-common</artifactId>
 
 
 </project>
