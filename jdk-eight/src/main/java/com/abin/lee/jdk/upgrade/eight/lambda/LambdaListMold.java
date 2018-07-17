@@ -15,19 +15,7 @@ import java.util.List;
  */
 public class LambdaListMold {
 
-    public static void doThread(){
-        Runnable runnable = new Runnable() {
-            @Override
-            public void run() {
-                System.out.println("execute .. runnable...common.");
-            }
-        };
-        new Thread(runnable).start();
-    }
 
-    public static void doThreadByLambda(){
-        new Thread(() -> System.out.println("execute .. runnable...lambda"));
-    }
 
     @Test
     public void doSort(){
@@ -47,7 +35,7 @@ public class LambdaListMold {
     public void doSortByLambda(){
         List<Integer> list = Lists.newArrayList(5,1,7,2,6,3,4);
         System.out.println(JsonUtil.toJson(list));
-        Collections.sort(list, (a, b) -> a.compareTo(b));
+        list.sort((item1, item2) -> item1.compareTo(item2));
         System.out.println(JsonUtil.toJson(list));
     }
 
@@ -60,18 +48,10 @@ public class LambdaListMold {
         System.out.println("listArray=" + JsonUtil.toJson(listArray));
     }
 
-    @Test
-    public void doMethod1(){
-        new Thread(()-> System.out.println("44444"));
-    }
-    public int add(int x, int y) {
-        return x + y;
-    }
 
 
     public static void main(String[] args) {
-        doThread();
-        doThreadByLambda();
+
 
     }
 

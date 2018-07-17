@@ -21,14 +21,21 @@ public class LambdaInterfaceMold {
     public static void main(String[] args) {
         new Thread(()-> System.out.println("------")).start();
 
+        new LambdaInterfaceMold().call(() -> System.out.println("-------------------------"));
 
+    }
+    public void callRun(){
+        call(() -> System.out.println("-------------------------"));
+    }
 
+    public void call(InnerModel model){
+        model.exc();
     }
 
 
 
 
-    public interface InnerModel{
+    public abstract interface InnerModel{
         abstract void exc();
     }
 
