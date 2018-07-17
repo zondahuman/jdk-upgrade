@@ -13,7 +13,7 @@ import java.util.List;
  * jdk-upgrade
  * com.abin.lee.jdk.upgrade.eight.lambda
  */
-public class LambdaExpression {
+public class LambdaListMold {
 
     public static void doThread(){
         Runnable runnable = new Runnable() {
